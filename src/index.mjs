@@ -8,6 +8,7 @@ import {
   ButtonBuilder,
   ButtonStyle,
   EmbedBuilder,
+  AttachmentBuilder,
   MessageFlags,
   InteractionType,
   PermissionFlagsBits,
@@ -219,6 +220,27 @@ client.on("interactionCreate", async (interaction) => {
         .setTimestamp();
 
       await interaction.reply({ embeds: [embed], flags: MessageFlags.Ephemeral });
+      return;
+    }
+
+    // ── /codigo ──────────────────────────────────────────────────
+    if (interaction.isChatInputCommand() && interaction.commandName === "codigo") {
+      await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+
+      const archivos = [
+        { nombre: "index.mjs",             ruta: path.join(__dirname, "index.mjs") },
+        { nombre: "register-commands.mjs", ruta: path.join(__dirname, "register-commands.mjs") },
+      ];
+
+      const adjuntos = archivos.map(({ nombre, ruta }) => {
+        const contenido = fs.readFileSync(ruta);
+        return new AttachmentBuilder(contenido, { name: nombre });
+      });
+
+      await interaction.editReply({
+        content: "📂 **Código fuente actual del bot:**",
+        files: adjuntos,
+      });
       return;
     }
 
