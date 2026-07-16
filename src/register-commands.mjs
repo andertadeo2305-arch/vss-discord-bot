@@ -17,6 +17,11 @@ const commands = [
     .setName("help")
     .setDescription("Muestra todos los comandos disponibles del bot")
     .toJSON(),
+  new SlashCommandBuilder()
+    .setName("released")
+    .setDescription("Despide a un jugador del equipo")
+    .addUserOption((o) => o.setName("jugador").setDescription("Jugador a despedir").setRequired(true))
+    .toJSON(),
 ];
 
 const rest = new REST({ version: "10" }).setToken(token);
