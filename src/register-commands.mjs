@@ -17,6 +17,10 @@ const commands = [
     .setName("help")
     .setDescription("Muestra todos los comandos disponibles del bot")
     .toJSON(),
+  new SlashCommandBuilder()
+    .setName("codigo")
+    .setDescription("Muestra el código fuente actual del bot")
+    .toJSON(),
 ];
 
 const rest = new REST({ version: "10" }).setToken(token);
