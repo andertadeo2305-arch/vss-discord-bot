@@ -130,6 +130,8 @@ function parsearOvrPosicion(raw) {
 // ── Datos en memoria ──────────────────────────────────────────────
 // Aguarda apertura de modal
 const pendientesModal = new Map();
+// Aguarda apertura de modal de released
+const pendientesModalReleased = new Map();
 // Aguarda confirmación del Squad Leader
 const pendientes = new Map();
 // Aguarda aceptación del jugador (tras confirmar el Squad Leader)
@@ -219,6 +221,109 @@ client.on("interactionCreate", async (interaction) => {
         .setTimestamp();
 
       await interaction.reply({ embeds: [embed], flags: MessageFlags.Ephemeral });
+      return;
+    }
+
+    // ── /released ────────────────────────────────────────────────
+    if (interaction.isChatInputCommand() && interaction.commandName === "released") {
+      const rolesPermitidos = ["squad leader", "squad officer"];
+      const tienePermiso = interaction.member.roles.cache.some((rol) =>
+        rolesPermitidos.some((p) => {
+          const q = rol.name.toLowerCase().trim();
+          return q === p || q.includes(p) || p.includes(q) || levenshtein(q, p) <= Math.max(2, Math.floor(p.length / 3));
+        })
+      );
+
+      if (!tienePermiso) {
+        await interaction.reply({
+          content: "❌ No tienes permisos. Solo los **Squad Leader** y **Squad Officer** pueden despedir jugadores.",
+          flags: MessageFlags.Ephemeral,
+        });
+        return;
+      }
+
+      const targetUser = interaction.options.getUser("jugador");
+      pendientesModalReleased.set(interaction.user.id, {
+        targetUserId: targetUser.id,
+        targetDisplayName: targetUser.displayName ?? targetUser.username,
+      });
+
+      const modal = new ModalBuilder()
+        .setCustomId("modal_released")
+        .setTitle("Despedir Jugador");
+
+      modal.addComponents(
+        new ActionRowBuilder().addComponents(
+          new TextInputBuilder().setCustomId("media_posicion").setLabel("Media y Posición").setStyle(TextInputStyle.Short).setPlaceholder("Ej: 89 | CAM").setRequired(false)
+        ),
+        new ActionRowBuilder().addComponents(
+          new TextInputBuilder().setCustomId("pais").setLabel("País del jugador").setStyle(TextInputStyle.Short).setPlaceholder("Ej: Argentina").setRequired(false)
+        )
+      );
+
+      await interaction.showModal(modal);
+      return;
+    }
+
+    // ── Modal released ────────────────────────────────────────────
+    if (interaction.type === InteractionType.ModalSubmit && interaction.customId === "modal_released") {
+      const preData = pendientesModalReleased.get(interaction.user.id);
+      pendientesModalReleased.delete(interaction.user.id);
+
+      if (!preData) {
+        await interaction.reply({ content: "⚠️ Ocurrió un error, intenta de nuevo.", flags: MessageFlags.Ephemeral });
+        return;
+      }
+
+      const mediaPosicion = interaction.fields.getTextInputValue("media_posicion") || null;
+      const pais          = interaction.fields.getTextInputValue("pais") || null;
+
+      // Detectar equipo actual del jugador
+      let equipoActual = "Agente Libre";
+      try {
+        const member = await interaction.guild.members.fetch(preData.targetUserId);
+        const rolActual = member.roles.cache.find(
+          (r) => r.name !== "@everyone" && !esRolSistema(r.name) && esRolSeleccion(r.name)
+        );
+        if (rolActual) {
+          equipoActual = rolActual.name;
+          await member.roles.remove(rolActual).catch(() => {});
+        }
+      } catch { /* continúa sin quitar rol */ }
+
+      const SEP  = "━━━━━━━━━━━━━━━━━━━━";
+      const SEP2 = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+      const SEP3 = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+
+      const desc = [
+        `:VirtualStreetSoccer: **RELEASED** :VirtualStreetSoccer:`,
+        "",
+        SEP,
+        "",
+        `:emoji_8:  **COPA AMERICA** :emoji_8:`,
+        "",
+        `**Nombre del jugador**: <@${preData.targetUserId}>`,
+        "",
+        mediaPosicion ? `**Media y Posición**: ${mediaPosicion}` : "",
+        "",
+        pais ? `**País**: :emoji_11: ${pais} >>>>>` : "",
+        "",
+        SEP2,
+        "",
+        `\`VIRTUAL STREET SOCCER RELEASED :\``,
+        SEP3,
+        "",
+        `✔ **JUGADOR LIBERADO**`,
+        "",
+        `*Despedido por ${interaction.user.username}*`,
+      ].filter((l) => l !== undefined).join("\n");
+
+      const embed = new EmbedBuilder()
+        .setColor(0xed4245)
+        .setDescription(desc)
+        .setTimestamp();
+
+      await interaction.reply({ embeds: [embed] });
       return;
     }
 
