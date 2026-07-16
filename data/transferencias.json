@@ -1,0 +1,837 @@
+{
+  "transferencias": [
+    {
+      "jugador": "Dermia",
+      "equipoOrigen": "Atlético madrid",
+      "equipoDestino": "Real Madrid",
+      "monto": "$1",
+      "fecha": "17/04/2026, 16:56",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "RB_Alexander",
+      "equipoOrigen": "Barcelona",
+      "equipoDestino": "Jueventus",
+      "monto": "1.000.000",
+      "fecha": "17/04/2026, 16:56",
+      "realizadoPor": "jin18z"
+    },
+    {
+      "jugador": "Moisés Caicedo",
+      "equipoOrigen": "Chelsea",
+      "equipoDestino": "Real Madrid",
+      "monto": "100000000",
+      "fecha": "17/04/2026, 16:58",
+      "realizadoPor": "mxykel.vxbezz"
+    },
+    {
+      "jugador": "Messi",
+      "equipoOrigen": "Inter miami",
+      "equipoDestino": "Barcelona",
+      "media": "89",
+      "fecha": "17/04/2026, 17:59",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Messi",
+      "equipoOrigen": "Inter",
+      "equipoDestino": "Messi",
+      "media": "89",
+      "fecha": "17/04/2026, 18:01",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Messi",
+      "equipoOrigen": "Inter",
+      "equipoDestino": "Madrid",
+      "media": "89",
+      "fecha": "17/04/2026, 18:03",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Barca",
+      "equipoOrigen": "Barcelona",
+      "equipoDestino": "Real Madrid",
+      "media": "99",
+      "pais": "Mexico",
+      "fecha": "17/04/2026, 18:05",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "Real madrid",
+      "equipoDestino": "Barcelona",
+      "media": "89",
+      "pais": "Mexico",
+      "fecha": "17/04/2026, 18:13",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "<@&1473918669632569344>",
+      "equipoDestino": "<@&1473918721499074667>",
+      "media": "89",
+      "pais": "Mexico",
+      "fecha": "17/04/2026, 18:13",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "RMA | Real Madrid Club de Futbol",
+      "equipoDestino": "FCB | Futbol Club Barcelona",
+      "media": "99",
+      "pais": "Gaynlolandia",
+      "fecha": "17/04/2026, 18:15",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "RMA | Real Madrid Club de Futbol",
+      "equipoDestino": "FCB | Fútbol Club Barcelona",
+      "media": "99",
+      "pais": "Mexico",
+      "fecha": "17/04/2026, 18:16",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "agente libre",
+      "equipoDestino": "celta de virgos",
+      "media": "89",
+      "pais": "peruano",
+      "fecha": "17/04/2026, 18:25",
+      "realizadoPor": "fafaddsadsadaa"
+    },
+    {
+      "jugador": ".",
+      "equipoOrigen": "INT | Inter de Milan",
+      "equipoDestino": "RMA | Real Madrid",
+      "media": "79MV",
+      "pais": "Chile",
+      "fecha": "17/04/2026, 18:27",
+      "realizadoPor": "slxzzzzk"
+    },
+    {
+      "jugador": "47fedee",
+      "equipoOrigen": "FCB | Fútbol Club Barcelona",
+      "equipoDestino": "FC | Real Madrid Club de Futbol",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 18:29",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "FC | Real Madrid Club de Futbol",
+      "equipoDestino": "JUV | Juventus de Turin",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:36",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "dundermma",
+      "equipoOrigen": "Borussia Dortmund",
+      "equipoDestino": "Juventus",
+      "media": "92",
+      "pais": "Ecuador",
+      "fecha": "17/04/2026, 19:38",
+      "realizadoPor": "dundermma"
+    },
+    {
+      "jugador": "dundermma",
+      "equipoOrigen": "FC | Real Madrid Club de Futbol",
+      "equipoDestino": "JUV | Juventus de Turin",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:42",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "dundermma",
+      "equipoOrigen": "<@&1486813905639706865>",
+      "equipoDestino": "<@&1473918721499074667>",
+      "media": "89",
+      "pais": "Perú",
+      "fecha": "17/04/2026, 19:43",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "dundermma",
+      "equipoOrigen": "JUV | Juventus de Turin",
+      "equipoDestino": "RMA | Real Madrid Club de Futbol",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:44",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "dundermma",
+      "equipoOrigen": "RMA | Real Madrid Club de Futbol",
+      "equipoDestino": "BRD | Borussia 09 e.V Dortmund",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:45",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "xSz4ndr",
+      "equipoOrigen": "BRD | Borussia 09 e.V Dortmund",
+      "equipoDestino": "RMA | Real Madrid Club de Futbol",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:49",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "xSz4ndr",
+      "equipoOrigen": "RMA | Real Madrid Club de Futbol",
+      "equipoDestino": "BRD | Borussia 09 e.V Dortmund",
+      "media": "89",
+      "pais": "Peru",
+      "fecha": "17/04/2026, 19:50",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "RMA | Real Madrid Club de Futbol",
+      "equipoDestino": "RCC | Real Club Celta de Vigo",
+      "media": "89",
+      "pais": "mexico",
+      "liga": "<:LALIGA:1486811120101626076>",
+      "fecha": "18/04/2026, 03:29",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "SebasTK",
+      "equipoOrigen": "F/A",
+      "equipoDestino": "AC MILAN",
+      "media": "83",
+      "pais": "Peru",
+      "liga": "Serie A",
+      "fecha": "18/04/2026, 03:32",
+      "realizadoPor": "jroyonxo"
+    },
+    {
+      "jugador": "Adner_1p",
+      "equipoOrigen": "SSA | COMUNIDAD",
+      "equipoDestino": "CUF | Chevinster United Football Club",
+      "media": "80PO",
+      "pais": "Mexico",
+      "liga": "Div 1",
+      "fecha": "19/04/2026, 05:56",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "hebrio",
+      "equipoOrigen": "CFC | Cuervos F.C",
+      "equipoDestino": "SSA | COMUNIDAD",
+      "media": "67dfc",
+      "pais": "Peru",
+      "liga": "Div 67",
+      "fecha": "19/04/2026, 05:59",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Krynos Circle F.C",
+      "media": "67",
+      "pais": "🇺🇸",
+      "liga": null,
+      "fecha": "19/04/2026, 14:54",
+      "realizadoPor": ".vhde"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "Equipo de nagi isagi y rin FC",
+      "equipoDestino": "Krynos Circle F.C",
+      "media": "67",
+      "pais": "🍆👹🔪",
+      "liga": "Liga surafricana de merlin",
+      "fecha": "19/04/2026, 15:00",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "Agente libre",
+      "equipoDestino": "Krynos curcle fc",
+      "media": "si",
+      "pais": "🇺🇸",
+      "liga": "ssa",
+      "fecha": "19/04/2026, 15:03",
+      "realizadoPor": ".vhde"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "SSA | COMUNIDAD",
+      "equipoDestino": "SCK | Sportiva Calcio Krynos Circly",
+      "media": "80",
+      "pais": "🇺🇸",
+      "liga": "SSA",
+      "fecha": "19/04/2026, 15:05",
+      "realizadoPor": ".vhde"
+    },
+    {
+      "jugador": "ɑrsenıÿ",
+      "equipoOrigen": "Celta de Vigo",
+      "equipoDestino": "CUF | Chevinster United Football Club",
+      "media": "79",
+      "pais": "Mexico",
+      "liga": null,
+      "fecha": "19/04/2026, 15:06",
+      "realizadoPor": ".cogiendote"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "la mm de barca fc",
+      "equipoDestino": "SCK | Sportiva Calcio Krynos Circly",
+      "media": "80",
+      "pais": "🇺🇸",
+      "liga": "SSA",
+      "fecha": "19/04/2026, 15:09",
+      "realizadoPor": ".vhde"
+    },
+    {
+      "jugador": "⃟",
+      "equipoOrigen": "la mm de barca fc",
+      "equipoDestino": "SCK | Sportiva Calcio Krynos Circle",
+      "media": "80",
+      "pais": "🇺🇸",
+      "liga": "SSA",
+      "fecha": "19/04/2026, 15:10",
+      "realizadoPor": ".vhde"
+    },
+    {
+      "jugador": "Linho",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Bananas Gampis Powers",
+      "media": null,
+      "pais": "Colombia",
+      "liga": null,
+      "fecha": "19/04/2026, 15:12",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "Linho",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "83",
+      "pais": "Colombia",
+      "liga": null,
+      "fecha": "19/04/2026, 15:15",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "t",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "83",
+      "pais": "Bolivia",
+      "liga": null,
+      "fecha": "19/04/2026, 15:17",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "̤̮𓏺𓏺",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "85",
+      "pais": "Perú",
+      "liga": null,
+      "fecha": "19/04/2026, 15:18",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "L",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "79",
+      "pais": "México",
+      "liga": null,
+      "fecha": "19/04/2026, 15:20",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "Lukiel",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "80",
+      "pais": "Colombia",
+      "liga": null,
+      "fecha": "19/04/2026, 15:22",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "paolo",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "80",
+      "pais": "Perú",
+      "liga": null,
+      "fecha": "19/04/2026, 15:23",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "fux",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "80",
+      "pais": "Colombia",
+      "liga": null,
+      "fecha": "19/04/2026, 15:24",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "nova",
+      "equipoOrigen": "Neandertales F.C",
+      "equipoDestino": "BGP | Bananas Gampis Powers F.C",
+      "media": "81",
+      "pais": "El Salvador",
+      "liga": null,
+      "fecha": "19/04/2026, 15:27",
+      "realizadoPor": "fackzzing"
+    },
+    {
+      "jugador": "Adner",
+      "equipoOrigen": "Belgica",
+      "equipoDestino": "Italia",
+      "media": "67",
+      "pais": "🏳️‍⚧️",
+      "liga": "Selección",
+      "fecha": "28/06/2026, 03:04",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Adner",
+      "equipoOrigen": "mami de barca fc",
+      "equipoDestino": "mami de leo gc",
+      "media": "pene",
+      "pais": "pene",
+      "liga": "pene",
+      "fecha": "28/06/2026, 03:06",
+      "realizadoPor": "h08g"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "Italia",
+      "equipoDestino": "Bélgica",
+      "media": "67",
+      "pais": "G🏳️‍⚧️",
+      "liga": "Selecciónes",
+      "fecha": "28/06/2026, 03:07",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "belgica",
+      "equipoDestino": "italia",
+      "media": "67",
+      "pais": "Peru",
+      "liga": "Peru",
+      "fecha": "28/06/2026, 03:07",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "HGML ! abraham.ts",
+      "equipoOrigen": "N/a",
+      "equipoDestino": "Belgica",
+      "media": "80",
+      "pais": "peru",
+      "liga": "Europa",
+      "fecha": "28/06/2026, 03:13",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "___31",
+      "equipoOrigen": "N/a",
+      "equipoDestino": "Belgica",
+      "media": "81",
+      "pais": "Peru",
+      "liga": "Europa",
+      "fecha": "28/06/2026, 03:14",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "Δ",
+      "equipoOrigen": "England",
+      "equipoDestino": "England",
+      "media": "82",
+      "pais": "Peri",
+      "liga": "England",
+      "fecha": "28/06/2026, 03:14",
+      "realizadoPor": "s_zk07k"
+    },
+    {
+      "jugador": "∆",
+      "equipoOrigen": "N/a",
+      "equipoDestino": "Belgica",
+      "media": "80",
+      "pais": "Ecuador",
+      "liga": "Europa",
+      "fecha": "28/06/2026, 03:15",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "Italia",
+      "equipoDestino": "Belgica",
+      "media": "89",
+      "pais": "Peru",
+      "posicion": "En 4",
+      "fecha": "28/06/2026, 03:27",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "SSA | Comunidad",
+      "equipoDestino": "Italia",
+      "ovr": "89",
+      "pais": "🏳️‍⚧️",
+      "rango": "C",
+      "valorMercado": "12M",
+      "fecha": "28/06/2026, 03:34",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "ITA | Selección de Futbol de Italia",
+      "equipoDestino": "Belgica",
+      "ovr": "67",
+      "pais": "🏳️‍⚧️",
+      "rango": "C",
+      "valorMercado": "12M",
+      "fecha": "28/06/2026, 03:36",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "ITA | Selección de Futbol de Italia",
+      "equipoDestino": "Belgica",
+      "ovr": "67",
+      "pais": "🏳️‍⚧️",
+      "rango": "C",
+      "valorMercado": "12M",
+      "fecha": "28/06/2026, 03:41",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "Keith",
+      "equipoOrigen": "BEL | Selección de Futbol de Belgica",
+      "equipoDestino": "Italia",
+      "ovr": "67",
+      "posicion": "MC",
+      "pais": "🏳️‍⚧️",
+      "rango": "C",
+      "valorMercado": "12M",
+      "fecha": "28/06/2026, 03:46",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "JoseLii",
+      "equipoOrigen": "EDE | Equipo de Estadísticas",
+      "equipoDestino": "Belgica",
+      "ovr": null,
+      "posicion": "79 MC",
+      "pais": "Argentina",
+      "rango": "C",
+      "valorMercado": "N/a",
+      "fecha": "28/06/2026, 04:03",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "૮₍ >⩊ < ₎ა",
+      "equipoOrigen": "SSA | Rol D",
+      "equipoDestino": "Belgica",
+      "ovr": null,
+      "posicion": "80 MC",
+      "pais": "Peru",
+      "rango": "C",
+      "valorMercado": "N/A",
+      "fecha": "28/06/2026, 04:06",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "‘",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Belgica",
+      "ovr": null,
+      "posicion": "80 ST",
+      "pais": "Peru",
+      "rango": "C",
+      "valorMercado": "N/a",
+      "fecha": "28/06/2026, 04:07",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "Shawcat",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Italia",
+      "ovr": null,
+      "posicion": "79DC",
+      "pais": "Colombia",
+      "rango": "c",
+      "valorMercado": "1M",
+      "fecha": "28/06/2026, 04:10",
+      "realizadoPor": "jin18z"
+    },
+    {
+      "jugador": "†",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "alemania",
+      "ovr": null,
+      "posicion": "84 st",
+      "pais": "tu madre down mx",
+      "rango": "a",
+      "valorMercado": "m",
+      "fecha": "28/06/2026, 04:13",
+      "realizadoPor": "3uwz."
+    },
+    {
+      "jugador": "Peqenho Dominio",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Belgica",
+      "ovr": null,
+      "posicion": "80 DFC",
+      "pais": "N/a",
+      "rango": "C",
+      "valorMercado": "N/a",
+      "fecha": "28/06/2026, 04:15",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "Adner",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Noo",
+      "ovr": "77",
+      "posicion": null,
+      "pais": "Peru",
+      "rango": "Aja",
+      "valorMercado": "Gayy",
+      "fecha": "28/06/2026, 04:17",
+      "realizadoPor": "ander_1p"
+    },
+    {
+      "jugador": "fux",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Francia",
+      "ovr": "82",
+      "posicion": "DFC",
+      "pais": "Colombia",
+      "rango": null,
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:18",
+      "realizadoPor": "flotandoenelimbo"
+    },
+    {
+      "jugador": ".",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": null,
+      "posicion": "MC",
+      "pais": "🇦🇷",
+      "rango": "Diamante",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:21",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "Piero",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "portugal",
+      "ovr": null,
+      "posicion": "86ST",
+      "pais": "peru",
+      "rango": "X",
+      "valorMercado": "67M",
+      "fecha": "28/06/2026, 04:25",
+      "realizadoPor": "fafaddsadsadaa"
+    },
+    {
+      "jugador": ".",
+      "equipoOrigen": "CRO | Selección de Futbol de Croacia",
+      "equipoDestino": "Croacia",
+      "ovr": "83",
+      "posicion": "MC",
+      "pais": "🇦🇷",
+      "rango": "Diamante",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:25",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "ensi",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Francia",
+      "ovr": null,
+      "posicion": null,
+      "pais": "Colombia",
+      "rango": null,
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:27",
+      "realizadoPor": "flotandoenelimbo"
+    },
+    {
+      "jugador": "Andrewxr.8",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "81",
+      "posicion": "DC",
+      "pais": "🇪🇨",
+      "rango": "Diamante",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:31",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "Thiago",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "79",
+      "posicion": "MC",
+      "pais": "🇵🇪",
+      "rango": "Oro",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:32",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "꫟                  !",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "80",
+      "posicion": "DC",
+      "pais": "🇦🇷",
+      "rango": "Oro",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 04:33",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "nanitotps",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Italia",
+      "ovr": null,
+      "posicion": "79DFC",
+      "pais": "Colombia",
+      "rango": "C",
+      "valorMercado": "1M",
+      "fecha": "28/06/2026, 05:45",
+      "realizadoPor": "jin18z"
+    },
+    {
+      "jugador": ".",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "79",
+      "posicion": "DFC",
+      "pais": "🇲🇽",
+      "rango": "Oro",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 05:49",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "rivakyy",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "79",
+      "posicion": "DC",
+      "pais": "🇲🇽",
+      "rango": "Oro",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 17:39",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "nowr",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Dinamarca",
+      "ovr": null,
+      "posicion": "83MC",
+      "pais": "Estados Unidos",
+      "rango": "B",
+      "valorMercado": "100M$",
+      "fecha": "28/06/2026, 17:41",
+      "realizadoPor": "losballersdelacity"
+    },
+    {
+      "jugador": "yhkevv",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Dinamarca",
+      "ovr": null,
+      "posicion": "82MC",
+      "pais": "Estados Unidos",
+      "rango": "B",
+      "valorMercado": "100M$",
+      "fecha": "28/06/2026, 17:41",
+      "realizadoPor": "losballersdelacity"
+    },
+    {
+      "jugador": "V",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Croacia",
+      "ovr": "80",
+      "posicion": "DFC",
+      "pais": "🇲🇽",
+      "rango": "Oro",
+      "valorMercado": null,
+      "fecha": "28/06/2026, 17:44",
+      "realizadoPor": "zeik17"
+    },
+    {
+      "jugador": "L.L",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Dinamarca",
+      "ovr": null,
+      "posicion": "80DC",
+      "pais": "Estados Unidos",
+      "rango": "C",
+      "valorMercado": "50M€",
+      "fecha": "28/06/2026, 17:49",
+      "realizadoPor": "losballersdelacity"
+    },
+    {
+      "jugador": "Abusive",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Belgica",
+      "ovr": null,
+      "posicion": "79 DFC",
+      "pais": "Peru",
+      "rango": "C",
+      "valorMercado": "N/a",
+      "fecha": "28/06/2026, 19:05",
+      "realizadoPor": "anderrxzp"
+    },
+    {
+      "jugador": "atr",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Madrid",
+      "ovr": null,
+      "posicion": "80DC",
+      "pais": "🏳️‍⚧️",
+      "rango": "A",
+      "valorMercado": "50M",
+      "fecha": "15/07/2026, 18:25",
+      "realizadoPor": "mutilaron"
+    },
+    {
+      "jugador": "Adner",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Skop",
+      "rated": "80MC",
+      "pais": "🏳️‍⚧️",
+      "fecha": "16/07/2026, 07:44",
+      "realizadoPor": "mutilaron"
+    },
+    {
+      "jugador": "Adner",
+      "equipoOrigen": "Agente Libre",
+      "equipoDestino": "Skop",
+      "rated": "80",
+      "pais": "🇲🇽",
+      "fecha": "16/07/2026, 07:59",
+      "realizadoPor": "mutilaron"
+    }
+  ]
+}
