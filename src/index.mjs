@@ -17,16 +17,15 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_FILE = path.join(__dirname, "../data/transferencias.json");
+const DATA_DIR   = path.join(__dirname, "../data");
+const DATA_FILE              = path.join(DATA_DIR, "transferencias.json");
+const PENDIENTES_FILE        = path.join(DATA_DIR, "pendientes.json");
+const PENDIENTES_ACEP_FILE   = path.join(DATA_DIR, "pendientes_aceptacion.json");
 
 function cargarDatos() {
   try {
-    if (!fs.existsSync(path.dirname(DATA_FILE))) {
-      fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
-    }
-    if (!fs.existsSync(DATA_FILE)) {
-      fs.writeFileSync(DATA_FILE, JSON.stringify({ transferencias: [] }, null, 2));
-    }
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    if (!fs.existsSync(DATA_FILE)) fs.writeFileSync(DATA_FILE, JSON.stringify({ transferencias: [] }, null, 2));
     return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
   } catch {
     return { transferencias: [] };
@@ -34,8 +33,23 @@ function cargarDatos() {
 }
 
 function guardarDatos(datos) {
-  fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(DATA_FILE, JSON.stringify(datos, null, 2));
+}
+
+function cargarMap(file) {
+  try {
+    if (!fs.existsSync(file)) return new Map();
+    const obj = JSON.parse(fs.readFileSync(file, "utf-8"));
+    return new Map(Object.entries(obj));
+  } catch {
+    return new Map();
+  }
+}
+
+function guardarMap(map, file) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(file, JSON.stringify(Object.fromEntries(map), null, 2));
 }
 
 const ROLES_SISTEMA = ["squad leader", "squad officer", "admin", "moderador", "mod", "bot", "everyone"];
@@ -127,15 +141,11 @@ function parsearOvrPosicion(raw) {
     : { ovr: null, posicion: raw.trim() };
 }
 
-// ── Datos en memoria ──────────────────────────────────────────────
-// Aguarda apertura de modal
-const pendientesModal = new Map();
-// Aguarda apertura de modal de released
+// ── Datos en memoria (persistidos en disco) ───────────────────────
+const pendientesModal         = new Map();
 const pendientesModalReleased = new Map();
-// Aguarda confirmación del Squad Leader
-const pendientes = new Map();
-// Aguarda aceptación del jugador (tras confirmar el Squad Leader)
-const pendientesAceptacion = new Map();
+const pendientes              = cargarMap(PENDIENTES_FILE);
+const pendientesAceptacion    = cargarMap(PENDIENTES_ACEP_FILE);
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -379,6 +389,7 @@ client.on("interactionCreate", async (interaction) => {
         channelId: interaction.channel.id,
         confirmedBy: interaction.user.username,
       });
+      guardarMap(pendientes, PENDIENTES_FILE);
 
       const embed = new EmbedBuilder()
         .setColor(0xffa500)
@@ -410,7 +421,7 @@ client.on("interactionCreate", async (interaction) => {
       const dt = pendientes.get(id);
 
       if (!dt) {
-        await interaction.reply({ content: "⚠️ Esta transferencia ya expiró o no existe.", flags: MessageFlags.Ephemeral });
+        await interaction.reply({ content: "⚠️ Esta transferencia no existe o ya fue procesada.", flags: MessageFlags.Ephemeral });
         return;
       }
 
@@ -426,11 +437,13 @@ client.on("interactionCreate", async (interaction) => {
 
       // Guardar datos en pendientesAceptacion (el jugador aún no aceptó)
       pendientes.delete(id);
+      guardarMap(pendientes, PENDIENTES_FILE);
       pendientesAceptacion.set(id, {
         ...dt,
         equipoOrigen: equipoOrigenDetectado,
         esperandoMsgId: interaction.message.id,
       });
+      guardarMap(pendientesAceptacion, PENDIENTES_ACEP_FILE);
 
       // Enviar DM al jugador con botón de aceptar/rechazar
       let dmEnviado = false;
@@ -515,7 +528,7 @@ client.on("interactionCreate", async (interaction) => {
       const dt = pendientesAceptacion.get(id);
 
       if (!dt) {
-        await interaction.reply({ content: "⚠️ Esta propuesta ya fue respondida o expiró.", flags: MessageFlags.Ephemeral });
+        await interaction.reply({ content: "⚠️ Esta propuesta ya fue respondida.", flags: MessageFlags.Ephemeral });
         return;
       }
 
@@ -574,6 +587,7 @@ client.on("interactionCreate", async (interaction) => {
       datos.transferencias.push(registro);
       guardarDatos(datos);
       pendientesAceptacion.delete(id);
+      guardarMap(pendientesAceptacion, PENDIENTES_ACEP_FILE);
 
       // Actualizar DM con ficha definitiva
       const dmEmbedFinal = new EmbedBuilder()
@@ -631,7 +645,7 @@ client.on("interactionCreate", async (interaction) => {
       const dt = pendientesAceptacion.get(id);
 
       if (!dt) {
-        await interaction.reply({ content: "⚠️ Esta propuesta ya fue respondida o expiró.", flags: MessageFlags.Ephemeral });
+        await interaction.reply({ content: "⚠️ Esta propuesta ya fue respondida.", flags: MessageFlags.Ephemeral });
         return;
       }
 
@@ -641,6 +655,7 @@ client.on("interactionCreate", async (interaction) => {
       }
 
       pendientesAceptacion.delete(id);
+      guardarMap(pendientesAceptacion, PENDIENTES_ACEP_FILE);
 
       // Actualizar DM
       const dmEmbedRechazado = new EmbedBuilder()
@@ -680,6 +695,7 @@ client.on("interactionCreate", async (interaction) => {
     if (interaction.isButton() && interaction.customId.startsWith("cancelar_")) {
       const id = interaction.customId.replace("cancelar_", "");
       pendientes.delete(id);
+      guardarMap(pendientes, PENDIENTES_FILE);
 
       const embed = new EmbedBuilder()
         .setTitle("❌ Transferencia Cancelada")
