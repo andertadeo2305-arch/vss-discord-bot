@@ -115,7 +115,7 @@ function buildTransferDescription({ jugador, pais, rated, equipoOrigen, equipoDe
     "",
     `**Rated** : ${rated ?? ""}`,
     "",
-    `**País**: ${pais ?? ""} >>>>>`,
+    `**País**: ${pais ?? ""}`,
     "",
     equipoOrigen ? `**Equipo Origen**: ${equipoOrigen}` : "",
     equipoDestino ? `**Equipo Destino**: ${equipoDestino}` : "",
