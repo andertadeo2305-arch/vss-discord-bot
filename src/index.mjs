@@ -100,22 +100,22 @@ function findRoleFuzzy(roles, name) {
   return bestDist <= threshold ? best : null;
 }
 
-function buildTransferDescription({ jugador, pais, rated, equipoOrigen, equipoDestino, confirmado = false, extra = "" }) {
-  const SEP  = "━━━━━━━━━━━━━━━━━━━━";
+function buildTransferDescription({ jugador, pais, rated, confirmado = false, extra = "" }) {
+  const SEP1 = "━━━━━━━━━━━━━━━━";
   const SEP2 = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
-  const SEP3 = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+  const SEP3 = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
   const lines = [
-    `:VirtualStreetSoccer: **TRANSFERENCIA** :VirtualStreetSoccer:`,
+    `<:emoji_12:1527589700221800538>**TRANSFERENCIA**<:emoji_12:1527589700221800538>`,
     "",
-    SEP,
+    SEP1,
     "",
-    `:emoji_8:  **COPA AMERICA** :emoji_8:`,
+    `<:emoji_12:1527217365899673610> **COPA AMERICA** <:emoji_12:1527217365899673610>`,
     "",
     `**Nombre del jugador**: ${jugador}`,
     "",
     `**Rated** : ${rated ?? ""}`,
     "",
-    `**País**: :emoji_11: ${pais ?? ""} >>>>>`,
+    `**País**: ${pais ?? ""} >>>>>`,
     "",
     SEP2,
     "",
@@ -398,8 +398,6 @@ client.on("interactionCreate", async (interaction) => {
             jugador: `<@${preData.targetUserId}>`,
             pais,
             rated,
-            equipoOrigen: "Se detectará al confirmar",
-            equipoDestino,
             confirmado: false,
             extra: `*Solicitado por ${interaction.user.username}*`,
           })
@@ -457,8 +455,6 @@ client.on("interactionCreate", async (interaction) => {
               jugador: `<@${dt.targetUserId}>`,
               pais: dt.pais,
               rated: dt.rated,
-              equipoOrigen: equipoOrigenDetectado,
-              equipoDestino: dt.equipoDestino,
               confirmado: false,
               extra: `*Propuesto por ${dt.confirmedBy}*`,
             })
@@ -597,8 +593,6 @@ client.on("interactionCreate", async (interaction) => {
             jugador: `<@${dt.targetUserId}>`,
             pais: dt.pais,
             rated: dt.rated,
-            equipoOrigen: dt.equipoOrigen,
-            equipoDestino: dt.equipoDestino,
             confirmado: true,
             extra: `📅 **Fecha:** ${fecha} | 👤 **${dt.confirmedBy}**`,
           })
@@ -623,8 +617,6 @@ client.on("interactionCreate", async (interaction) => {
                 jugador: `<@${dt.targetUserId}>`,
                 pais: dt.pais,
                 rated: dt.rated,
-                equipoOrigen: dt.equipoOrigen,
-                equipoDestino: dt.equipoDestino,
                 confirmado: true,
                 extra: `📅 **Fecha:** ${fecha} | 👤 **${dt.confirmedBy}**${rolesMsg}`,
               })
