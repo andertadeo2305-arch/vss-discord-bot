@@ -610,12 +610,10 @@ client.on("interactionCreate", async (interaction) => {
 
       await interaction.update({ embeds: [dmEmbedFinal], components: [] });
 
-      // Eliminar el mensaje "esperando respuesta" y publicar ficha definitiva
+      // Publicar ficha definitiva en el canal
       try {
-        const guild = await client.guilds.fetch(dt.guildId);
-        const canal = await guild.channels.fetch(dt.channelId);
-        if (canal) {
-          // Borrar el mensaje de espera
+        const canal = await client.channels.fetch(dt.channelId);
+        if (canal && canal.isTextBased()) {
           if (dt.esperandoMsgId) {
             await canal.messages.delete(dt.esperandoMsgId).catch(() => {});
           }
@@ -634,9 +632,11 @@ client.on("interactionCreate", async (interaction) => {
             )
             .setTimestamp();
           await canal.send({ embeds: [canalEmbed] });
+        } else {
+          console.error("Canal no encontrado o no es de texto:", dt.channelId);
         }
       } catch (err) {
-        console.error("Error al publicar en canal:", err.message);
+        console.error("Error al publicar en canal:", err.message, "channelId:", dt.channelId);
       }
 
       return;
